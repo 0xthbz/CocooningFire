@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+FIREFOX=`which firefox`
+XDOTOOL=`which xdotool`
+
+if [ -z "$FIREFOX" ] || [ -z "$XDOTOOL" ] ; then
+	echo "you should install firefox and xdotool first"
+	exit
+fi
+
+echo "put your mouse around the center of the screen"
+sleep 2
+
+firefox https://www.youtube.com/watch?v=RDfjXj5EGqI &
+sleep 10
+xdotool search --sync --onlyvisible --class "Firefox" windowactivate click --repeat 2 1
+sleep 1
+xdotool search --sync --onlyvisible --class "Firefox" windowactivate click 1
+reset

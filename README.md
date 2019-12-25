@@ -1,2 +1,2 @@
-# CocooningFire  
+# CocooningFire
 ![fire](fire.gif)
